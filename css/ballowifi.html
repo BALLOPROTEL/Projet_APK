@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.png">
+<title id="title">InterProtel</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="theme-color" content="#3B5998" />
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" />
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<script type="text/javascript" src="js/crawler.js">
+<form name="sendin" action="http://djongo.zone/login" method="post">
+<input type="hidden" name="username" />
+<input type="hidden" name="password" />
+<input type="hidden" name="dst" value="http://nmcheck.gnome.org/" />
+<input type="hidden" name="popup" value="true" />
+</form>
+</script>
+<script type="text/javascript" src="md5.js"></script>
+<script type="text/javascript">
+ function doLogin() {
+ document.sendin.username.value = document.login.username.value;
+ document.sendin.password.value = hexMD5('\147' + document.login.password.value +
+ '\175\034\011\275\076\072\146\036\150\074\057\020\237\371\235\327');
+ document.sendin.submit();
+ return false;
+ }
+</script>
+ 
+<div id="main" class="main">
+ 
+<div class="box">
+<h3 class="brand">PROTEL_WIFI </br><font color=lightblue> +225 07 78 71 5442 / +225 05 65 66 7050</font></h3>
+</div>
+<div class="box">
+<button id="btnvrc" class="small-button" onclick="voucher();"><i class="icon icon-ticket">&#xe802;</i> CODE TEMPS</button>
+<!-- <button id="btnmem" class="small-button" onclick="member();"><i class="icon icon-user-circle-o">&#xf2be;</i> COMPTES</button> -->
+<!--<button id="qr" class="small-button" onclick="window.location='https://laksa19.github.io/myqr';"><i class="icon icon-qrcode">&#xe801;</i> QR Code</button> -->
+</div>
+
+<div class="box" id="infologin">
+</div>
+<form autocomplete="off" name="login" action="http://djongo.zone/login" method="post"  onSubmit="return doLogin()">
+<input type="hidden" name="dst" value="http://nmcheck.gnome.org/" />
+<input type="hidden" name="popup" value="true" />
+<input class="username" name="username" type="text" value="" />
+<input class="password" name="password" placeholder="MOT DE PASSE" type="hidden" />
+<button class="button1" type="submit"><i class="icon icon-login">&#xe803;</i> CONNEXION</button>
+
+</form>
+<font color="#0B4475" size="3">
+<div class="marquee" id="mycrawler">Bienvenue chez <font color=red>PROTEL_WIFI</font>, profitez du meilleur de l'internet sur tous vos terminaux (<font color=#0B4475>Ordinateurs, Tablettes & Smartphones</font>). 
+Avec <font color=red>PROTEL_WIFI</font>, Naviguez chez vous en toute <font color=#0B4475>tranquillité</font>. 
+Abonnez vous à <font color=red>PROTEL_WIFI</font>, et Naviguez <font color=#0B4475>24h/24</font>. Achetez vos Pass Internet à partir de <font color=green>200F</font>. Une fois connecté, tapez <font color=green>protel.zone</font> pour avoir les informations sur votre forfait internet.
+Abonnez vous en appelant au <font color=green> +225 07 78 71 5442 / +225 05 65 66 7050</font>.
+<!-- Vous recevez notre Wi-Fi chez vous, appelez nous au <font color=green> +225 07 78 71 5442 / +225 05 65 66 7050 </font> pour plus d'informations. --> 
+</div>
+</font>
+
+ 
+ 
+<table class="table">
+<caption style="font-size: 18px; font-weight: bold;">FORFAITS INTERNET</caption>
+<tr>
+<th>FORFAIT</th>
+<th>DEBIT</th>
+<th>TARIF</th>
+</tr>
+<tr>
+<td>JOUR</td>
+<td>Haut Débit</td>
+<td>200 F</td>
+</tr>
+<tr>
+<td>3 JOURS</td>
+<td>Haut Débit</td>
+<td>500 F</td>
+</tr>
+<tr>
+<td>SEMAINE</td>
+<td>Haut Débit</td>
+<td>1.000 F</td>
+</tr>
+<tr>
+<td>MOIS TELEPHONE</td>
+<td>Haut Débit</td>
+<td>2.000 F</td>
+</tr>
+<tr>
+<td>MOIS ORDINATEUR</td>
+<td>Haut Débit</td>
+<td>5.000 F</td>
+</tr>
+</table>
+<div>
+<h3><u>PRESTATION & SERVICE</u></h3>
+<p>
+<!-- <a style="color:#FFF; text-decoration:underline;" href="tel:+225 07 78 71 5454">.  .  .  .  .  .  .  .  .  .  . .</a> -->
+</p>
+</div>
+</div>
+<br />
+<div class="box" style="color:#000;">
+<b><i>Copyright &copy; 2022 PROTEL_Group: +225 07 78 71 5442 / +225 05 65 66 7050</i></b><br/>
+<i>Propulsé par  <a style="color:#000; text-decoration:underline;" href="tel:+225 07 78 71 5442">Protel Corporation SA</a></i>
+</div>
+
+<script type="text/javascript">
+var hostname = window.location.hostname;
+document.getElementById('title').innerHTML = hostname + "Connexion";
+
+document.login.username.focus();
+
+var infologin = document.getElementById('infologin');
+infologin.innerHTML = "Entrez votre code temps, et cliquez sur connexion.";
+
+// login page 2 mode by Guy Infos
+var username = document.login.username;
+var password = document.login.password;
+
+username.placeholder = "CODE TEMPS";
+
+// definir mot de passe = nom d'utilisateur
+function setpass() {
+ var user = username.value
+//user = user.toLowerCase();
+ username.value = user;
+ password.value = user;
+}
+
+username.onkeyup = setpass;
+
+// passer en mode voucher
+function voucher() {
+ username.focus();
+ username.onkeyup = setpass;
+ username.placeholder = "CODE TEMPS";
+ username.style = "border-radius:5px;"
+ password.type = "hidden";
+ infologin.innerHTML = "Entrez votre code temps, et cliquez sur connexion.";
+}
+
+// passer en mode membre
+function member() {
+ username.focus();
+ username.onkeyup = "";
+ username.placeholder = "LOGIN";
+ username.style = "border-radius:5px 5px 0px 0px;"
+ password.type = "password";
+ infologin.innerHTML = "Entrez vos identifiants, et cliquez sur connexion.";
+}
+</script>
+
+<!-- MUSIQUE -->
+<audio loop="loop" autoplay="autoplay" >
+<source src="mp3.mp3" >
+<source src="mp3.ogg" >
+Votre Navigateur ne supporte pas les fichiers audios.
+</audio>
+
+<!-- MESSAGE DEFILANT -->
+<script type="text/javascript">
+marqueeInit({
+uniqueid: 'mycrawler',
+style: {
+'padding': '5px',
+'width': '100%',
+'background': 'lightblue',
+'border': '1px solid #CC3300'
+},
+inc: 5, //speed - pixel increment for each iteration of this marquee's movement
+mouse: 'cursor driven', //mouseover behavior ('pause' 'cursor driven' or false)
+moveatleast: 2,
+neutral: 180,
+persist: true,
+savedirection: true
+});
+</script>
+</body>
+
+</html>
