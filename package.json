@@ -1,5 +1,22 @@
 {
   "dependencies": {
     "tar": "^6.1.11"
-  }
+  },
+  "name": "projet_askoetude_apk",
+  "version": "1.0.0",
+  "description": "server http pour api rest",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BALLOPROTEL/Projet_ASKOETUDE_APK.git"
+  },
+  "author": "BALLO",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BALLOPROTEL/Projet_ASKOETUDE_APK/issues"
+  },
+  "homepage": "https://github.com/BALLOPROTEL/Projet_ASKOETUDE_APK#readme"
 }
